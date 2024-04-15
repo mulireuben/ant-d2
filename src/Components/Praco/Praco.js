@@ -1,8 +1,13 @@
-import { Collapse, Divider, Form, Menu, PageHeader, Row ,Input } from 'antd'
+import { } from '@testing-library/user-event/dist/tab';
+import { Collapse, Divider, Form, Menu, PageHeader, Row ,Input,Tabs } from 'antd'
 import React from 'react'
 
 const Praco = () => {
   const { Panel } = Collapse;
+  const {TabPane}=Tabs
+  function callback(key){
+    console.log(key)
+  }
   return (
     <div className='main-div'>
       <Menu>
@@ -45,6 +50,19 @@ const Praco = () => {
       </Form.Item>
     </Panel>
   </Collapse>,
+
+
+  <Tabs defaultActiveKey="1" onChange={callback}>
+    <TabPane tab="Tab 1" key="1">
+      Content of Tab Pane 1
+    </TabPane>
+    <TabPane tab="Tab 2" key="2">
+      Content of Tab Pane 2
+    </TabPane>
+    <TabPane tab="Tab 3" key="3">
+      Content of Tab Pane 3
+    </TabPane>
+  </Tabs>,
      
     </div>
   )
