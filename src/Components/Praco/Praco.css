@@ -1,0 +1,10 @@
+.praco-page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-div{
+    display: flex;
+    justify-content: space-between;
+
+}
